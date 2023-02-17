@@ -6,13 +6,35 @@ function mostrar()
 {
 	var contador;
 	var acumulador;
-	var respuesta;
-	contador=0;
-	acumulador=0;
-	respuesta='si';
+	var respuesta; // variable de respuesta
+	var promedio;
+	var numeroIngresado;
 
+	contador = 0;
+	acumulador = 0;
+	//respuesta='si';
 
-	txtIdSuma.value=acumulador;
-	txtIdPromedio.value=acumulador/contador;
+	respuesta == true;
+	do 
+	 {
 
-}//FIN DE LA FUNCIÓN
+		// operaciones
+		numeroIngresado = prompt("Ingrese un numero");
+		numeroIngresado = parseFloat(numeroIngresado);
+
+		acumulador = acumulador + numeroIngresado;
+		contador = contador + 1;
+
+		//pregunto hasta que el usuario quiera
+		respuesta = confirm("Desea seguir ingresando numeros?");
+
+	} while (respuesta ==  true);
+	
+	  promedio = acumulador / contador;
+
+	  document.getElementById("txtIdSuma").value = acumulador;
+	  document.getElementById("txtIdPromedio").value = promedio;
+	}
+
+//FIN DE LA FUNCIÓN 	txtIdSuma.value=acumulador;
+	// txtIdPromedio.value=acumulador/contador;
